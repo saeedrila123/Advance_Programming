@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- HelloServlet -->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <!-- DBTestServlet -->
+    <servlet>
+        <servlet-name>DBTestServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.TestDBServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DBTestServlet</servlet-name>
+        <url-pattern>/db-test</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome page -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- LoginServlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- LogoutServlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- AddReservationServlet -->
+    <servlet>
+        <servlet-name>AddReservationServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.AddReservationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddReservationServlet</servlet-name>
+        <url-pattern>/add-reservation</url-pattern>
+    </servlet-mapping>
+
+    <!-- ViewReservationsServlet -->
+    <servlet>
+        <servlet-name>ViewReservationsServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.ViewReservationsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewReservationsServlet</servlet-name>
+        <url-pattern>/view-reservations</url-pattern>
+    </servlet-mapping>
+
+    <!-- BillServlet -->
+    <servlet>
+        <servlet-name>BillServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.BillServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BillServlet</servlet-name>
+        <url-pattern>/bill</url-pattern>
+    </servlet-mapping>
+
+    <!-- AuthFilter -->
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.roomreservation.controller.AuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ReservationDetailsServlet -->
+    <servlet>
+        <servlet-name>ReservationDetailsServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.ReservationDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ReservationDetailsServlet</servlet-name>
+        <url-pattern>/reservation-details</url-pattern>
+    </servlet-mapping>
+
+    <!-- UpdateReservationServlet -->
+    <servlet>
+        <servlet-name>UpdateReservationServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.UpdateReservationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateReservationServlet</servlet-name>
+        <url-pattern>/update-reservation</url-pattern>
+    </servlet-mapping>
+
+    <!-- DeleteReservationServlet -->
+    <servlet>
+        <servlet-name>DeleteReservationServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.DeleteReservationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteReservationServlet</servlet-name>
+        <url-pattern>/delete-reservation</url-pattern>
+    </servlet-mapping>
+
+    <!-- Reports -->
+    <servlet>
+        <servlet-name>ReportReservationsServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.ReportReservationsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportReservationsServlet</servlet-name>
+        <url-pattern>/report-reservations</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReportRevenueServlet</servlet-name>
+        <servlet-class>com.roomreservation.controller.ReportRevenueServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportRevenueServlet</servlet-name>
+        <url-pattern>/report-revenue</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Edit Reservation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .card { max-width: 520px; border: 1px solid #ddd; border-radius: 10px; padding: 18px; }
+        label { display:block; margin-top: 10px; }
+        input, select { width:100%; padding:10px; margin-top:6px; box-sizing:border-box; }
+        button { margin-top: 14px; padding: 10px 14px; cursor:pointer; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Edit Reservation</h2>
+
+    <form method="post" action="update-reservation">
+        <label>Reservation No</label>
+        <input id="reservationNo" name="reservationNo" readonly>
+
+        <label>Guest Name</label>
+        <input id="guestName" name="guestName" required>
+
+        <label>Address</label>
+        <input id="address" name="address" required>
+
+        <label>Contact No</label>
+        <input id="contact" name="contact" required>
+
+        <label>Room Type</label>
+        <select id="roomType" name="roomType" required>
+            <option>Single</option>
+            <option>Double</option>
+            <option>Deluxe</option>
+            <option>Suite</option>
+        </select>
+
+        <label>Check-in Date</label>
+        <input type="date" id="checkIn" name="checkIn" required>
+
+        <label>Check-out Date</label>
+        <input type="date" id="checkOut" name="checkOut" required>
+
+        <button type="submit">Update</button>
+    </form>
+
+    <p><a href="view-reservations">Back to List</a></p>
+</div>
+
+<script>
+    // Fill fields from query string (basic)
+    const p = new URLSearchParams(location.search);
+    document.getElementById("reservationNo").value = p.get("reservationNo") || "";
+    document.getElementById("guestName").value = p.get("guestName") || "";
+    document.getElementById("address").value = p.get("address") || "";
+    document.getElementById("contact").value = p.get("contact") || "";
+    document.getElementById("roomType").value = p.get("roomType") || "Single";
+    document.getElementById("checkIn").value = p.get("checkIn") || "";
+    document.getElementById("checkOut").value = p.get("checkOut") || "";
+</script>
+</body>
+</html>

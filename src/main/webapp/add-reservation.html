@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Add Reservation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .card { max-width: 520px; border: 1px solid #ddd; border-radius: 10px; padding: 18px; }
+    label { display:block; margin-top: 10px; }
+    input, select { width:100%; padding:10px; margin-top:6px; box-sizing: border-box; }
+    button { margin-top: 14px; padding: 10px 14px; cursor:pointer; }
+    a { display:inline-block; margin-top: 14px; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h2>Add Reservation</h2>
+
+  <form method="post" action="add-reservation">
+    <label>Reservation No</label>
+    <input name="reservationNo" placeholder="R001" required>
+
+    <label>Guest Name</label>
+    <input name="guestName" required>
+
+    <label>Address</label>
+    <input name="address" required>
+
+    <label>Contact No</label>
+    <input name="contact" required>
+
+    <label>Room Type</label>
+    <select name="roomType" required>
+      <option value="">-- Select --</option>
+      <option>Single</option>
+      <option>Double</option>
+      <option>Deluxe</option>
+      <option>Suite</option>
+    </select>
+
+    <label>Check-in Date</label>
+    <input type="date" name="checkIn" required>
+
+    <label>Check-out Date</label>
+    <input type="date" name="checkOut" required>
+
+    <button type="submit">Save Reservation</button>
+  </form>
+
+  <a href="dashboard.html">Back to Dashboard</a>
+</div>
+</body>
+</html>

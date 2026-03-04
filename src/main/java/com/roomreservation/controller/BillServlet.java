@@ -104,5 +104,6 @@ public class BillServlet extends HttpServlet {
                 .replace(">", "&gt;")
                 .replace("\"", "&quot;")
                 .replace("'", "&#39;");
+
     }
 }

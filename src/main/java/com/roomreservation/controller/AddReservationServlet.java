@@ -55,6 +55,7 @@ public class AddReservationServlet extends HttpServlet {
         } catch (Exception e) {
             resp.setContentType("text/plain");
             resp.getWriter().println("DB Error: " + e.getMessage());
+
         }
     }
 }

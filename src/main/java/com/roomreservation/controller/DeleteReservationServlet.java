@@ -32,5 +32,6 @@ public class DeleteReservationServlet extends HttpServlet {
         }
 
         resp.sendRedirect("view-reservations");
+
     }
 }
